@@ -30,23 +30,23 @@ function setCurrentTabTitle(currenttabindex) {
      switch(currenttabindex)
         {
             case 0:
-            	page.tabs[currenttabindex]= tabS0.title
+            	page.tabs[currenttabindex]= tabS0.title.toUpperCase()
                 page.tabs = page.tabs
                 break;
             case 1:
-                page.tabs[currenttabindex]=tabS1.title
+                page.tabs[currenttabindex]=tabS1.title.toUpperCase()
                 page.tabs = page.tabs
                 break;
             case 2:
-                page.tabs[currenttabindex]=tabS2.title
+                page.tabs[currenttabindex]=tabS2.title.toUpperCase()
                 page.tabs = page.tabs
                 break;
             case 3:
-                page.tabs[currenttabindex]=tabS3.title
+                page.tabs[currenttabindex]=tabS3.title.toUpperCase()
                 page.tabs = page.tabs
                 break;
             case 4:
-                page.tabs[currenttabindex]=tabS4.title
+                page.tabs[currenttabindex]=tabS4.title.toUpperCase()
                 page.tabs = page.tabs
                 break;
             default:
@@ -137,6 +137,28 @@ function goForwardCurrentTab(currenttabindex) {
                 break;
             case 4:
                 tabS4.goForward();
+                break;
+            default:
+                console.log('non');
+        }
+}
+function refreshCurrentTab(currenttabindex) {
+     switch(page.selectedTab)
+        {
+            case 0:
+                tabS0.reload();
+                break;
+            case 1:
+                tabS1.reload();
+                break;
+            case 2:
+                tabS2.reload();
+                break;
+            case 3:
+                tabS3.reload();
+                break;
+            case 4:
+                tabS4.reload();
                 break;
             default:
                 console.log('non');
